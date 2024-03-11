@@ -335,4 +335,53 @@ const (
 	// DataBufferUserID is the user id associated to data buffer written by client when using Pull/Push audio
 	// input streams.
 	DataBufferUserID PropertyID = 11002
+
+	// PronunciationAssessmentReferenceText is the reference text of the audio for pronunciation evaluation.
+	// For this and the following pronunciation assessment parameters, see
+	// https://docs.microsoft.com/azure/cognitive-services/speech-service/rest-speech-to-text#pronunciation-assessment-parameters
+	// for details.
+	// Under normal circumstances, you shouldn't have to use this property directly.
+	PronunciationAssessmentReferenceText PropertyID = 12001
+
+	// PronunciationAssessmentGradingSystem is the grading system for pronunciation assessment.
+	// The point system for pronunciation score calibration (FivePoint or HundredMark).
+	// Under normal circumstances, you shouldn't have to use this property directly.
+	PronunciationAssessmentGradingSystem PropertyID = 12002
+
+	// PronunciationAssessmentGranularity is the pronunciation evaluation granularity (Phoneme, Word, or FullText).
+	// Under normal circumstances, you shouldn't have to use this property directly.
+	PronunciationAssessmentGranularity PropertyID = 12003
+
+	// PronunciationAssessmentEnableMiscue defines if enable miscue calculation.
+	// With this enabled, the pronounced words will be compared to the reference text,
+	// and will be marked with omission/insertion based on the comparison. The default setting is False.
+	// Under normal circumstances, you shouldn't have to use this property directly.
+	PronunciationAssessmentEnableMiscue PropertyID = 12005
+
+	// PronunciationAssessmentPhonemeAlphabet is the pronunciation evaluation phoneme alphabet.
+	// The valid values are "SAPI" (default) and "IPA"
+	// Under normal circumstances, you shouldn't have to use this property directly.
+	PronunciationAssessmentPhonemeAlphabet PropertyID = 12006
+
+	// PronunciationAssessmentNBestPhonemeCount is the pronunciation evaluation nbest phoneme count.
+	// Under normal circumstances, you shouldn't have to use this property directly.
+	PronunciationAssessmentNBestPhonemeCount PropertyID = 12007
+
+	// PronunciationAssessmentEnableProsodyAssessment defines whether to enable prosody assessment.
+	// Under normal circumstances, you shouldn't have to use this property directly.
+	// Added in version 1.33.0
+	PronunciationAssessmentEnableProsodyAssessment PropertyID = 12008
+
+	// PronunciationAssessmentJson is the json string of pronunciation assessment parameters
+	// Under normal circumstances, you shouldn't have to use this property directly.
+	PronunciationAssessmentJson PropertyID = 12009
+
+	// PronunciationAssessmentParams is pronunciation assessment parameters.
+	// This property is intended to be read-only. The SDK is using it internally.
+	PronunciationAssessmentParams PropertyID = 12010
+
+	// PronunciationAssessmentContentTopic is the content topic of the pronunciation assessment.
+	// Under normal circumstances, you shouldn't have to use this property directly.
+	// Added in version 1.33.0
+	PronunciationAssessmentContentTopic PropertyID = 12020
 )
